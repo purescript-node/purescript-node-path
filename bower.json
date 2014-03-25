@@ -1,0 +1,20 @@
+{
+  "name": "purescript-node-path",
+  "version": "0.0.0",
+  "description": "Type declarations for Node's Path module",
+  "keywords": [
+    "purescript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "externs",
+    "js",
+    "tmp"
+  ],
+  "devDependencies": {
+    "purescript-exceptions": "*"
+  }
+}
