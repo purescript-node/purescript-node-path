@@ -1,6 +1,6 @@
 {
   "name": "purescript-node-path",
-  "version": "0.0.0",
+  "homepage": "https://github.com/purescript-contrib/purescript-node-path",
   "description": "Type declarations for Node's Path module",
   "keywords": [
     "purescript"
@@ -8,13 +8,13 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "node_modules",
     "bower_components",
-    "externs",
-    "js",
-    "tmp"
-  ],
-  "devDependencies": {
-    "purescript-exceptions": "*"
-  }
+    "node_modules",
+    "output",
+    "tests",
+    "tmp",
+    "bower.json",
+    "Gruntfile.js",
+    "package.json"
+  ]
 }
