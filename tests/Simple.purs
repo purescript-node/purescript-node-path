@@ -13,7 +13,7 @@ assertEq x y =
 
 main = do
   assertEq (normalize "/foo/bar//baz/asdf/quux/..") (normalize "/foo/bar/baz/asdf")
-  assertEq (join "/foo" "bar") (normalize "/foo/bar")
+  assertEq (join ["/foo", "bar"]) (normalize "/foo/bar")
   --assertEq (resolve ["foo/bar", "tmp/file/", ".."] "a/../subfile") (normalize "/foo/bar")
   assertEq (relative "/data/orandea/test/aaa" "/data/orandea/impl/bbb") (normalize "../../impl/bbb")
   assertEq (dirname "/foo/bar/baz/asdf/quux") (normalize "/foo/bar/baz/asdf")

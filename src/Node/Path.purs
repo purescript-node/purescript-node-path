@@ -17,11 +17,9 @@ foreign import normalize
 -- Joins two path segments together and normalizes the resulting path.
 --
 foreign import join
-  "var join = function (start) { \
-  \  return function (end) { \
-  \    return require('path').join(start, end); \
-  \  }; \
-  \}" :: FilePath -> FilePath -> FilePath
+  "var join = function (segments) { \
+  \  return require('path').join.apply(this, segments); \
+  \}" :: [FilePath] -> FilePath
 
 -- |
 -- Resolves `to` to an absolute path ([from...], to).
