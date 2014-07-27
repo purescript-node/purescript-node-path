@@ -19,7 +19,7 @@
 
     extname :: FilePath -> FilePath
 
-    join :: FilePath -> FilePath -> FilePath
+    join :: [FilePath] -> FilePath
 
     normalize :: FilePath -> FilePath
 
