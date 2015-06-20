@@ -1,20 +1,22 @@
 {
   "name": "purescript-node-path",
-  "homepage": "https://github.com/purescript-contrib/purescript-node-path",
-  "description": "Type declarations for Node's Path module",
+  "homepage": "https://github.com/purescript-node/purescript-node-path",
+  "description": "PureScript type definitions for Node's path module",
   "keywords": [
     "purescript"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purescript-node/purescript-node-path.git"
+  },
   "ignore": [
     "**/.*",
     "bower_components",
     "node_modules",
     "output",
-    "tests",
-    "tmp",
     "bower.json",
-    "Gruntfile.js",
+    "gulpfile.js",
     "package.json"
   ]
 }

@@ -1,99 +1,17 @@
-# Module Documentation
+# purescript-node-path
 
-## Module Node.Path
+[![Latest release](http://img.shields.io/bower/v/purescript-node-path.svg)](https://github.com/purescript-node/purescript-node-path/releases)
+[![Build Status](https://travis-ci.org/purescript-node/purescript-node-path.svg?branch=master)](https://travis-ci.org/purescript-node/purescript-node-path)
+[![Maintainer: garyb](https://img.shields.io/badge/maintainer-garyb-lightgrey.svg)](http://github.com/garyb)
 
-#### `FilePath`
+Type type definitions for Node's path module.
 
-``` purescript
-type FilePath = String
+## Installation
+
+```
+bower install purescript-node-path
 ```
 
-Type for strings representing file paths.
+## Module documentation
 
-#### `normalize`
-
-``` purescript
-normalize :: FilePath -> FilePath
-```
-
-Normalize a string path, taking care of `..` and `.`, duplicated slashes,
-etc. If the path contains a trailing slash it is preserved. On Windows
-backslashes are used.
-
-#### `concat`
-
-``` purescript
-concat :: [FilePath] -> FilePath
-```
-
-Concatenates multiple path segments together and normalizes the resulting path.
-
-#### `resolve`
-
-``` purescript
-resolve :: [FilePath] -> FilePath -> FilePath
-```
-
-Resolves `to` to an absolute path ([from...], to).
-
-#### `relative`
-
-``` purescript
-relative :: FilePath -> FilePath -> FilePath
-```
-
-Solve the relative path from `from` to `to`.
-
-#### `dirname`
-
-``` purescript
-dirname :: FilePath -> FilePath
-```
-
-Return the directory name of a path.
-
-#### `basename`
-
-``` purescript
-basename :: FilePath -> FilePath
-```
-
-Return the last portion of a path.
-
-#### `basenameWithoutExt`
-
-``` purescript
-basenameWithoutExt :: FilePath -> FilePath -> FilePath
-```
-
-Return the last portion of a path, also dropping a specific file extension
-if it matches the end of the name.
-
-#### `extname`
-
-``` purescript
-extname :: FilePath -> FilePath
-```
-
-Return the extension of the path, from the last `.` to end of string in the
-last portion of the path. If there is no `.` in the last portion of the
-path or the first character of it is `.`, then it returns an empty string.
-
-#### `sep`
-
-``` purescript
-sep :: String
-```
-
-The platform-specific file separator. `\\` or `/`.
-
-#### `delimiter`
-
-``` purescript
-delimiter :: String
-```
-
-The platform-specific path delimiter, `;` or `:`.
-
-
-
+- [Node.Path](docs/Node.Path.md)
