@@ -22,15 +22,15 @@ exports.relative = function (from) {
   };
 };
 
-exports.dirname = function (path) {
-  return path.normalize(path.dirname(path));
+exports.dirname = function (p) {
+  return path.normalize(path.dirname(p));
 };
 
 exports.basename = path.basename;
 
-exports.basenameWithoutExt = function (path) {
+exports.basenameWithoutExt = function (p) {
   return function (ext) {
-    return path.basename(path, ext);
+    return path.basename(p, ext);
   };
 };
 

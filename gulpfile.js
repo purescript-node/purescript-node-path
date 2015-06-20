@@ -6,6 +6,7 @@ var jshint = require("gulp-jshint");
 var jscs = require("gulp-jscs");
 var plumber = require("gulp-plumber");
 var purescript = require("gulp-purescript");
+var run = require("gulp-run");
 var rimraf = require("rimraf");
 
 var sources = [
@@ -57,4 +58,11 @@ gulp.task("dotpsci", function () {
     .pipe(purescript.dotPsci());
 });
 
-gulp.task("default", ["make", "docs", "dotpsci"]);
+gulp.task("test", ["make"], function() {
+  return gulp.src(sources.concat(["test/**/*.purs"]))
+    .pipe(plumber())
+    .pipe(purescript.psc({ main: "Test.Main", ffi: foreigns }))
+    .pipe(run("node"));
+});
+
+gulp.task("default", ["make", "docs", "dotpsci", "test"]);

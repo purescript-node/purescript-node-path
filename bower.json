@@ -18,5 +18,8 @@
     "bower.json",
     "gulpfile.js",
     "package.json"
-  ]
+  ],
+  "devDependencies": {
+    "purescript-assert": "^0.1.0"
+  }
 }
