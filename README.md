@@ -14,4 +14,4 @@ bower install purescript-node-path
 
 ## Module documentation
 
-- [Node.Path](docs/Node.Path.md)
+- [Node.Path](docs/Node/Path.md)
