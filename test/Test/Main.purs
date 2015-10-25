@@ -18,3 +18,6 @@ main = do
   assert $ extname "index" == ""
   assert $ sep == normalize "/"
   assert $ delimiter == ";" || delimiter == ":"
+  path1 <- resolve []
+  path2 <- resolve ["."]
+  assert $ path1 == path2
