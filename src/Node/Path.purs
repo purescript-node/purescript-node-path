@@ -1,5 +1,7 @@
 module Node.Path where
 
+import Control.Monad.Eff
+
 -- | Type for strings representing file paths.
 type FilePath = String
 
@@ -12,7 +14,7 @@ foreign import normalize :: FilePath -> FilePath
 foreign import concat :: Array FilePath -> FilePath
 
 -- | Resolves `to` to an absolute path ([from...], to).
-foreign import resolve :: Array FilePath -> FilePath -> FilePath
+foreign import resolve :: forall eff. Array FilePath -> Eff eff FilePath
 
 -- | Solve the relative path from `from` to `to`.
 foreign import relative :: FilePath -> FilePath -> FilePath
