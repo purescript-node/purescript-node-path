@@ -93,4 +93,12 @@ delimiter :: String
 
 The platform-specific path delimiter, `;` or `:`.
 
+#### `parse`
+
+``` purescript
+parse :: String -> { root :: String, dir :: String, base :: String, ext :: String, name :: String }
+```
+
+Parse a path into components.
+
 
