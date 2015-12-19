@@ -37,3 +37,6 @@ foreign import sep :: String
 
 -- | The platform-specific path delimiter, `;` or `:`.
 foreign import delimiter :: String
+
+-- | Parse a path into components.
+foreign import parse :: String -> { root :: String, dir :: String, base :: String, ext :: String, name :: String }

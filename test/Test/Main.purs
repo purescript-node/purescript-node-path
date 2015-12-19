@@ -18,3 +18,10 @@ main = do
   assert $ extname "index" == ""
   assert $ sep == normalize "/"
   assert $ delimiter == ";" || delimiter == ":"
+
+  let path = parse "/home/user/file.js"
+  assert $ path.root == "/"
+  assert $ path.dir == "/home/user"
+  assert $ path.base == "file.js"
+  assert $ path.ext == ".js"
+  assert $ path.name == "file"

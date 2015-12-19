@@ -39,3 +39,5 @@ exports.extname = path.extname;
 exports.sep = path.sep;
 
 exports.delimiter = path.delimiter;
+
+exports.parse = path.parse;
