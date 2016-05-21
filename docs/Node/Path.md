@@ -101,4 +101,12 @@ parse :: String -> { root :: String, dir :: String, base :: String, ext :: Strin
 
 Parse a path into components.
 
+#### `isAbsolute`
+
+``` purescript
+isAbsolute :: String -> Boolean
+```
+
+Determines whether path is an absolute path
+
 

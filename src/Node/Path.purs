@@ -40,3 +40,6 @@ foreign import delimiter :: String
 
 -- | Parse a path into components.
 foreign import parse :: String -> { root :: String, dir :: String, base :: String, ext :: String, name :: String }
+
+-- | Determines whether path is an absolute path
+foreign import isAbsolute :: String -> Boolean
