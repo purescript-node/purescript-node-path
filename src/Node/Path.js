@@ -41,3 +41,5 @@ exports.sep = path.sep;
 exports.delimiter = path.delimiter;
 
 exports.parse = path.parse;
+
+exports.isAbsolute = path.isAbsolute;
