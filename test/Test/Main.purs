@@ -1,9 +1,11 @@
 module Test.Main where
 
 import Prelude
-import Node.Path
-import Test.Assert
+import Control.Monad.Eff (Eff)
+import Node.Path (parse, delimiter, normalize, sep, extname, basenameWithoutExt, basename, dirname, relative, concat)
+import Test.Assert (ASSERT, assert)
 
+main  :: forall eff. Eff ( assert :: ASSERT | eff ) Unit
 main = do
   assert $ normalize "/foo/bar//baz/asdf/quux/.." == normalize "/foo/bar/baz/asdf"
   assert $ concat ["/foo", "bar"] == normalize "/foo/bar"

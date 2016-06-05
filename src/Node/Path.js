@@ -1,7 +1,5 @@
 "use strict";
 
-// module Node.Path
-
 var path = require("path");
 
 exports.normalize = path.normalize;

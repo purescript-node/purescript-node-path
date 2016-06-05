@@ -1,13 +1,13 @@
 {
   "private": true,
   "devDependencies": {
-    "pulp": "^4.3.0",
+    "pulp": "^9.0.0",
     "jscs": "^1.13.1",
     "jshint": "^2.8.0",
     "rimraf": "^2.3.3"
   },
   "scripts": {
     "build": "jshint src && jscs src && pulp build && rimraf docs && pulp docs",
-    "postinstall": "pulp dep install"
+    "postinstall": "bower install"
   }
 }
