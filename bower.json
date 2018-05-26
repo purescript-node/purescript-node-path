@@ -20,7 +20,7 @@
     "package.json"
   ],
   "devDependencies": {
-    "purescript-assert": "#compiler/0.12",
-    "purescript-console": "#compiler/0.12"
+    "purescript-assert": "^4.0.0",
+    "purescript-console": "^4.1.0"
   }
 }
