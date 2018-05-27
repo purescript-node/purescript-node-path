@@ -1,6 +1,9 @@
 module Node.Path where
 
 -- | Type for strings representing file paths.
+import Effect (Effect)
+
+-- | Type for strings representing file paths.
 type FilePath = String
 
 -- | Normalize a string path, taking care of `..` and `.`, duplicated slashes,
@@ -12,7 +15,7 @@ foreign import normalize :: FilePath -> FilePath
 foreign import concat :: Array FilePath -> FilePath
 
 -- | Resolves `to` to an absolute path ([from...], to).
-foreign import resolve :: Array FilePath -> FilePath -> FilePath
+foreign import resolve :: Array FilePath -> FilePath -> Effect FilePath
 
 -- | Solve the relative path from `from` to `to`.
 foreign import relative :: FilePath -> FilePath -> FilePath

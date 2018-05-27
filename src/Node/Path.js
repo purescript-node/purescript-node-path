@@ -10,7 +10,9 @@ exports.concat = function (segments) {
 
 exports.resolve = function (from) {
   return function (to) {
-    return path.resolve.apply(this, from.concat([to]));
+    return function () {
+      return path.resolve.apply(this, from.concat([to]));
+    };
   };
 };
 
