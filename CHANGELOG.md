@@ -12,6 +12,15 @@ Bugfixes:
 
 Other improvements:
 
+## [v4.0.0](https://github.com/purescript-node/purescript-node-path/releases/tag/v4.0.0) - 2021-MONTH-DAY
+
+Breaking changes:
+  - Updated dependencies for PureScript 0.14 (#16)
+
+Other improvements:
+  - Migrated CI to GitHub Actions, updated installation instructions to use Spago, and switched from `jshint` to `eslint` (#15)
+  - Added a changelog and pull request template (#17)
+
 ## [v3.0.0](https://github.com/purescript-node/purescript-node-path/releases/tag/v3.0.0) - 2018-05-27
 
 - Updated for PureScript 0.12
@@ -19,15 +28,15 @@ Other improvements:
 
 ## [v2.0.0](https://github.com/purescript-node/purescript-node-path/releases/tag/v2.0.0) - 2017-04-04
 
-Update for 0.11 (@anilanar)
+- Update for 0.11 (@anilanar)
 
 ## [v1.0.0](https://github.com/purescript-node/purescript-node-path/releases/tag/v1.0.0) - 2016-06-09
 
-Update for 1.0 core libraries.
+- Update for 1.0 core libraries.
 
 ## [v0.4.0-rc.1](https://github.com/purescript-node/purescript-node-path/releases/tag/v0.4.0-rc.1) - 2015-06-20
 
-Initial release candidate of the library intended for the 0.7 compiler.
+- Initial release candidate of the library intended for the 0.7 compiler.
 
 ## [v0.3.0](https://github.com/purescript-node/purescript-node-path/releases/tag/v0.3.0) - 2015-03-28
 
@@ -40,5 +49,4 @@ Initial release candidate of the library intended for the 0.7 compiler.
 
 ## [v0.1.0](https://github.com/purescript-node/purescript-node-path/releases/tag/v0.1.0) - 2014-06-10
 
-
-
+- Initial release
