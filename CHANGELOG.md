@@ -15,7 +15,7 @@ Other improvements:
 ## [v4.0.0](https://github.com/purescript-node/purescript-node-path/releases/tag/v4.0.0) - 2021-MONTH-DAY
 
 Breaking changes:
-  - Updated dependencies for PureScript 0.14 (#16)
+  - Added support for PureScript 0.14 and dropped support for all previous versions (#16)
 
 Other improvements:
   - Migrated CI to GitHub Actions, updated installation instructions to use Spago, and switched from `jshint` to `eslint` (#15)
