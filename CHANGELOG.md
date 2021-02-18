@@ -12,7 +12,7 @@ Bugfixes:
 
 Other improvements:
 
-## [v4.0.0](https://github.com/purescript-node/purescript-node-path/releases/tag/v4.0.0) - 2021-MONTH-DAY
+## [v4.0.0](https://github.com/purescript-node/purescript-node-path/releases/tag/v4.0.0) - 2021-02-26
 
 Breaking changes:
   - Added support for PureScript 0.14 and dropped support for all previous versions (#16)
