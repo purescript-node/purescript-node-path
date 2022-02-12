@@ -1,45 +1,40 @@
 "use strict";
 
-var path = require("path");
+import path from "path";
+export var normalize = path.normalize;
 
-exports.normalize = path.normalize;
-
-exports.concat = function (segments) {
+export function concat(segments) {
   return path.join.apply(this, segments);
-};
+}
 
-exports.resolve = function (from) {
+export function resolve(from) {
   return function (to) {
     return function () {
       return path.resolve.apply(this, from.concat([to]));
     };
   };
-};
+}
 
-exports.relative = function (from) {
+export function relative(from) {
   return function (to) {
     return path.relative(from, to);
   };
-};
+}
 
-exports.dirname = function (p) {
+export function dirname(p) {
   return path.normalize(path.dirname(p));
-};
+}
 
-exports.basename = path.basename;
+export var basename = path.basename;
 
-exports.basenameWithoutExt = function (p) {
+export function basenameWithoutExt(p) {
   return function (ext) {
     return path.basename(p, ext);
   };
-};
+}
 
-exports.extname = path.extname;
-
-exports.sep = path.sep;
-
-exports.delimiter = path.delimiter;
-
-exports.parse = path.parse;
-
-exports.isAbsolute = path.isAbsolute;
+export var extname = path.extname;
+export var sep = path.sep;
+export var delimiter = path.delimiter;
+export var parse = path.parse;
+export var isAbsolute = path.isAbsolute;
