@@ -6,9 +6,7 @@ export function concat(segments) {
 }
 
 export function resolve(from) {
-  return to => (function() {
-    return path.resolve.apply(this, from.concat([to]));
-  });
+  return to => () => path.resolve.apply(this, from.concat([to]));
 }
 
 export function relative(from) {
