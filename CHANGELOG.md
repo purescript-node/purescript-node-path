@@ -11,7 +11,11 @@ New features:
 Bugfixes:
 
 Other improvements:
-- Use node: prefix imports in FFI to preferentially force builtin module usage (#24)
+
+## [v5.0.1](https://github.com/purescript-node/purescript-node-path/releases/tag/v5.0.1) - 2025-01-19
+
+Other improvements:
+- Use node: prefix imports in FFI to preferentially force builtin module usage (#24 by @ematizza)
 
 ## [v5.0.0](https://github.com/purescript-node/purescript-node-path/releases/tag/v5.0.0) - 2022-04-27
 
