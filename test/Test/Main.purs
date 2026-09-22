@@ -10,7 +10,8 @@ main :: Effect Unit
 main = do
   assertEqual { actual: normalize "/foo/bar//baz/asdf/quux/..", expected: normalize "/foo/bar/baz/asdf" }
   assertEqual { actual: concat ["/foo", "bar"], expected: normalize "/foo/bar" }
-  assertEqual { actual: relative "/data/orandea/test/aaa" "/data/orandea/impl/bbb", expected: normalize "../../impl/bbb" }
+  rel <- relative "/data/orandea/test/aaa" "/data/orandea/impl/bbb"
+  assertEqual { actual: rel, expected: normalize "../../impl/bbb" }
   assertEqual { actual: dirname "/foo/bar/baz/asdf/quux", expected: normalize "/foo/bar/baz/asdf" }
   assertEqual { actual: basename "/foo/bar/baz/asdf/quux.html", expected: "quux.html" }
   assertEqual { actual: basenameWithoutExt "/foo/bar/baz/asdf/quux.html" ".html", expected: "quux" }

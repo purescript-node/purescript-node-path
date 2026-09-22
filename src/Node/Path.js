@@ -10,7 +10,7 @@ export function resolve(from) {
 }
 
 export function relative(from) {
-  return to => path.relative(from, to);
+  return to => () => path.relative(from, to);
 }
 
 export function dirname(p) {
