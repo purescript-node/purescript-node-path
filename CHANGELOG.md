@@ -5,6 +5,7 @@ Notable changes to this project are documented in this file. The format is based
 ## [Unreleased]
 
 Breaking changes:
+- `relative` now returns `Effect FilePath`, since Node resolves both arguments against the current working directory (#25)
 
 New features:
 

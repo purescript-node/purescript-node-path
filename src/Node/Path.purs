@@ -17,8 +17,10 @@ foreign import concat :: Array FilePath -> FilePath
 -- | Resolves `to` to an absolute path ([from...], to).
 foreign import resolve :: Array FilePath -> FilePath -> Effect FilePath
 
--- | Solve the relative path from `from` to `to`.
-foreign import relative :: FilePath -> FilePath -> FilePath
+-- | Solve the relative path from `from` to `to`. Both paths are resolved
+-- | against the current working directory first, so the result depends on it
+-- | whenever either path is relative.
+foreign import relative :: FilePath -> FilePath -> Effect FilePath
 
 -- | Return the directory name of a path.
 foreign import dirname :: FilePath -> FilePath
