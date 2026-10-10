@@ -9,7 +9,7 @@ import Test.Assert (assert, assertEqual)
 main :: Effect Unit
 main = do
   assertEqual { actual: normalize "/foo/bar//baz/asdf/quux/..", expected: normalize "/foo/bar/baz/asdf" }
-  assertEqual { actual: concat ["/foo", "bar"], expected: normalize "/foo/bar" }
+  assertEqual { actual: concat [ "/foo", "bar" ], expected: normalize "/foo/bar" }
   rel <- relative "/data/orandea/test/aaa" "/data/orandea/impl/bbb"
   assertEqual { actual: rel, expected: normalize "../../impl/bbb" }
   assertEqual { actual: dirname "/foo/bar/baz/asdf/quux", expected: normalize "/foo/bar/baz/asdf" }
@@ -30,6 +30,6 @@ main = do
   assertEqual { actual: path.ext, expected: ".js" }
   assertEqual { actual: path.name, expected: "file" }
 
-  path1 <- resolve ["a"] ""
-  path2 <- resolve ["a"] "."
+  path1 <- resolve [ "a" ] ""
+  path2 <- resolve [ "a" ] "."
   assertEqual { actual: path1, expected: path2 }
