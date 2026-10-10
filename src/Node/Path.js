@@ -6,11 +6,11 @@ export function concat(segments) {
 }
 
 export function resolve(from) {
-  return to => () => path.resolve.apply(this, from.concat([to]));
+  return (to) => () => path.resolve.apply(this, from.concat([to]));
 }
 
 export function relative(from) {
-  return to => () => path.relative(from, to);
+  return (to) => () => path.relative(from, to);
 }
 
 export function dirname(p) {
@@ -20,7 +20,7 @@ export function dirname(p) {
 export const basename = path.basename;
 
 export function basenameWithoutExt(p) {
-  return ext => path.basename(p, ext);
+  return (ext) => path.basename(p, ext);
 }
 
 export const extname = path.extname;
